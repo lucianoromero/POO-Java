@@ -66,7 +66,7 @@ public class Main {
 		materia1.setProfessor(professor1);
 
 		// ### testes ###
-        materia1.exibirfrequencia();
+        materia1.estaAprovado(1);
 		// ### Menu ###
         /*
 		int opcao;

@@ -107,21 +107,16 @@ public class Disciplina {
 
 	// ##############################################################
 	// ### METODO PARA VERIFICAR SE O ALUNO ESTRA APROVADO OU NAO ###
-	public void estaAprovado(int posAluno) {
+	public boolean estaAprovado(int posAluno) {
 		for (int i = 0; i < alunos.size(); i++) {
 			if (i == posAluno) {
 				if ((notas.get(i) >= 6) || (frequencias.get(i) >= 75)) {
-					System.out.println("Aprovado" + alunos.get(i).getNome());
+					return true;
 				}
 			}
-		}
+		}return false;
 	}
 
-	public void exibirfrequencia() {
-		for (int i = 0; i < frequencias.size(); i++) {
-			System.out.println("Dados " +   notas.get(i) + " #### " + frequencias.get(i) + " ### " + alunos.get(i).getNome());
-		}
 
-	}
 
 }// FIM DA CLASSE

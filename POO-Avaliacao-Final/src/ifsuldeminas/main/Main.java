@@ -11,7 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		// Ultilizando o primerio construtor 
+		// Ultilizando o primerio construtor
 		Disciplina materia1 = new Disciplina("Matematica", 1, 5, 4);
 
 		// Criando Objeto Aluno
@@ -65,11 +65,11 @@ public class Main {
 		// Colocando o Professor na Materia
 		materia1.setProfessor(professor1);
 
-		// ### testes ###
-       materia1.exibirOrnadosPorNotas();
-       
+		// ### testes APAGAR DEPOIS ###
+		/// materia1.exibirOrnadosPorNotas();
+
 		// ### Menu ###
-        /*
+
 		int opcao;
 		// Estrutura de Repeticao
 		do {
@@ -94,13 +94,17 @@ public class Main {
 				materia1.removerProfessor();
 				materia1.desmatricularAlunos();
 				System.out.println("Vc saiu do Sistema !");
+				System.out.println("#################");
 				break;
 			case 1:
 				materia1.exibirDisciplina();
+				System.out.println("#################");
 				break;
 			case 2:
-				materia1.exibirAprovados();
-				//materia1.exibirReprovados();
+				System.out.println("Numeros de Alunos" + materia1.getNumerosAlunos());
+				System.out.println("Numeros de Reprovados " + materia1.getQuantidadeReprovados());
+				System.out.println("Numeros de Aprovados " + materia1.getQuantidadeAprovados());
+				System.out.println("#################");
 				break;
 			case 3:
 				materia1.exibirAprovados();
@@ -121,16 +125,21 @@ public class Main {
 				System.out.println("#################");
 				break;
 			case 7:
-				materia1.
+				System.out.println("Media total da turma: " + materia1.calcularMedia());
+				materia1.exibirAlunosAcimasMedia();
 				System.out.println("#################");
 				break;
 			case 8:
+				System.out.println("Media total da turma: " + materia1.calcularMedia());
+				materia1.exibirAlunosAbaixoMedia();
 				System.out.println("#################");
 				break;
 			case 9:
+				materia1.exibirAlunoNotasAproveitamento();
 				System.out.println("#################");
 				break;
 			case 10:
+				materia1.exibirOrnadosPorNotas();
 				System.out.println("#################");
 				break;
 			case 11:
@@ -141,8 +150,8 @@ public class Main {
 
 		} while (opcao != 0);
 
-		sc.close(); 
-		*/
+		sc.close();
+
 	}
 
 }

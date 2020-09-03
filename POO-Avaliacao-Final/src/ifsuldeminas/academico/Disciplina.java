@@ -73,7 +73,7 @@ public class Disciplina {
 
 	// ################################################
 	// ### METODO ULTILIZADO PARA REMOVER PROFESSOR ###
-	public void removerProvessor() {
+	public void removerProfessor() {
 		this.professor = null;
 	}
 

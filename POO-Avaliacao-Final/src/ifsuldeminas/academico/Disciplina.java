@@ -140,4 +140,37 @@ public class Disciplina {
 		}
 	}
 
+	// #####################################
+	// ### METODO PARA EXIBIR APROVADOS ###
+	public void exibirAprovados() {
+		boolean retorno;
+		int total = 0;
+		if (getNumerosAlunos() == 0) {
+			System.out.println("Disciplina nao possui alunos matriculados");
+		} else {
+			for (int i = 0; i < alunos.size(); i++) {
+				retorno = estaAprovado(i);
+				if (retorno == true) {
+					System.out.println("Alunos Aprovados: " + alunos.get(i).getNome() + " Notas: " + notas.get(i)
+							+ " Frequencia: " + frequencias.get(i));
+					total = total + 1;
+				}
+			}
+			if (total == 0) {
+				System.out.println("Não ha alunos Aprovados");
+			}
+		}
+	}
+
+	// #####################################
+	// ### RETORNO DO CALCULO DAS MEDIAS ###
+	public double calcularMedia() {
+		double total = 0;
+		for (int i = 0; i < alunos.size(); i++) {
+			total = total + notas.get(i);
+		}
+		total = total / getNumerosAlunos();
+		return total;
+	}
+
 }// FIM DA CLASSE

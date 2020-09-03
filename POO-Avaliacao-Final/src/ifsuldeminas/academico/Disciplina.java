@@ -116,7 +116,19 @@ public class Disciplina {
 			}
 		}return false;
 	}
-
+	
+	//#######################################
+	//### METODO PARA EXIBIR REPROVADOS #####
+    public void exibirReprovados() {
+    	boolean retorno;
+    	for (int i = 0; i < alunos.size(); i++) {
+    		 retorno = estaAprovado(i);
+    		if(retorno == false) {
+             System.out.println("Alunos Reprovados: " +alunos.get(i).getNome() + " Notas: " + notas.get(i) + " Frequencia: " + frequencias.get(i));     					
+    		}
+    	}
+    	
+    }
 
 
 }// FIM DA CLASSE

@@ -43,7 +43,7 @@ public class Disciplina {
 		this.frequencias = frequencias;
 	}
 
-	// Metodo Matricular Aluno
+	// ### METODO ULTILIZADO PARA MATRICULAR ALUNOS ###
 	public boolean matricularAluno(Aluno aluno) {
 		   //for (int i = 0; i < alunos.size(); i++) {
 			//if (alunos.get(i).getRa() != alunos.get(i).getRa()) {
@@ -55,7 +55,7 @@ public class Disciplina {
 		//}
 		//return false;
 	}
-
+    /// ###  GETTER E SETTER #####
 	public String getNome() {
 		return nome;
 	}
@@ -87,8 +87,8 @@ public class Disciplina {
 	public void setNumTotalaulas(int numTotalaulas) {
 		this.numTotalaulas = numTotalaulas;
 	}
-
-	// Metodo Para desmatricular Aluno
+    /// ### FIM DOS GETTER E SETTER ####
+	//  ### METODO ULTILIZADO PARA DESMATRICULAR ALUNOS POR USA POSSIÇÃO ###
 	public boolean desmatriculaAluno(int posAluno) {
 		for (int i = 0; i < alunos.size(); i++) {
 			if (i == posAluno) {
@@ -101,17 +101,18 @@ public class Disciplina {
 		return false;
 	}
 
-	// Metodo para add proferro
+	// ### METODO ULTILIZADO PARA ADICIONAR O OBJETO PROFESSOR ###
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
 	}
 
-	// Metodo para remover professor
+	// ### METODO ULTILIZADO PARA REMOVER UM PROFESSOR ####
 	public void removerProfessor() {
 		this.professor = null;
 	}
 
-	// Metodo para ternar o numero de alunos add em uma diciplina
+	// ### METODO ULTILIZADO PARA VERIFICAR O TOTAL DE ALUNO EM UMA 
+	// ###  DISCIPLINA ELE RETORNA O VALOR 
 	public int getNumerosAlunos() {
 		int totaldealunosmatriculados = 0;
 		for (int i = 0; i < alunos.size(); i++) {
@@ -122,7 +123,8 @@ public class Disciplina {
 		return totaldealunosmatriculados;
 	}
 
-	// Metodo para add Nota
+	// ### METODO ULTILIZADO PARA ADICIONAR AS NOTAS 
+	// ### ADICIONANDO AS NOTAS NO ARRAYLIST
 	public boolean addNota(int posAluno, double nota) {
 		//if (nota < 0 && nota > 10) {
 			for (int i = 0; i < alunos.size(); i++) {
@@ -135,7 +137,7 @@ public class Disciplina {
 		return false;
 	}
 
-	// Metodo para add Frenquencia do Aluno
+	// ### METODO PARA ADICIONAR A FRENQUECIA NO ARRAYLIST ###
 	public boolean addFrequencia(int posAluno, int frequenciaTotal) {
 		if (frequenciaTotal < 0 && this.numTotalaulas > 10) {
 			for (int i = 0; i < alunos.size(); i++) {
@@ -156,7 +158,9 @@ public class Disciplina {
 		System.out.println("Nada");
 	}
 		
-	// Metodo para verificar se esta aprovado
+	// #### METODO ULTILIZADO PARA VERIFICAR APROVACAO 
+	// #### RETORNA TRUE CASO APROVADO E FALSE SE NÃO APROVADO
+	// #### RECEBE COMO PARAMENTRO A POSSICAO DO ALUNO
 	public boolean estaAprovado(int posAluno) {
 		for (int i = 0; i < alunos.size(); i++) {
 			if (i == posAluno) {
@@ -168,7 +172,7 @@ public class Disciplina {
 		return false;
 	}
 
-	// Metodos para exibir Reprovados
+	// #### METODO ULTILIZADO PARA EXIBIR OS REPROVADOS ####
 	public void exibirReprovados() {
 		boolean valor;
 		for (int i = 0; i < alunos.size(); i++) {
@@ -181,7 +185,7 @@ public class Disciplina {
 
 	}
 
-	// Metodo para exibir Aprovados
+	// ### METODO PARA EXIBIR OS APROVADOS ####
 	public void exibirAprovados() {
 		int totalreprovado = 0;
 		int totalalunos = 0;
@@ -202,7 +206,8 @@ public class Disciplina {
 
 	}
 
-	// Metodo Calcular Media
+	// ### METODO ULTILIZADO PARA CALCULAR A MEDICA ###
+	// ### RETORNA COMO PARAMENTRO A MEDICA ###
 	public double calcularMedia() {
 		double mediatotal;
 		double media = 0;
@@ -218,7 +223,7 @@ public class Disciplina {
 
 	}
 
-	// Exibir Maior nota
+	// #### METODO ULTILIZADO PARA EXIBIR A MAIOR NOTA ####
 	public void exibirMaiorNota() {
 		double maior = 0;
 		for (int i = 0; i < alunos.size(); i++) {
@@ -236,7 +241,7 @@ public class Disciplina {
 
 	}
 
-	// Exibir aluno com menor nota
+	// #### METODO ULTILIZADO PARA EXIBIR A MENOR NOTA ####
 	public void exibirMenorNota() {
 		double menor = 0;
 		for (int i = 0; i < alunos.size(); i++) {
@@ -255,7 +260,7 @@ public class Disciplina {
 
 	}
 
-	// Quantidades de Reprovados
+	// #### METODO ULTILIZADO PARA EXIBIR A QUANTIDADE DE REPROVADO ####
 	public void getQuantidadeReprovados() {
 		int totalreprovado = 0;
 		for (int i = 0; i < alunos.size(); i++) {
@@ -268,7 +273,7 @@ public class Disciplina {
 		System.out.println("Total de Alunos Reprovados" + totalreprovado);
 	}
 
-	// Quantidades de Aprovados
+	// #### METODO ULTILIZADO PARA EXIBIR A QUANTIDADE DE APROVADOS ###
 	public void getQuantidadeAprovados() {
 		int totalAprovados = 0;
 		for (int i = 0; i < alunos.size(); i++) {
@@ -282,7 +287,7 @@ public class Disciplina {
 		System.out.println("Total de Alunos Reprovados" + totalAprovados);
 	}
 
-	// Exibir Professor
+	// #### METODO ULTILIZADO PARA EXIBIR OS DADOS DO PROFESSOR ####
 	public void exibirProfessor() {
 		if (professor == null) {
 			System.out.println("Disciplina nao possui professor");
@@ -292,7 +297,8 @@ public class Disciplina {
 
 	}
 
-	// Aproveitamento do Aluno
+	// #### METODO ULTILIZADO PARA EXIBIR O APROVEITAMENTO DO ALUNO ###
+	// #### RETORNA COMO PARAMENTRO O APROVEITAMENTO 
 	public int getAproveitamentoAluno(int posAluno) {
 		double metade = this.numTotalaulas / 2;
 		int retorno = 0;
@@ -311,7 +317,8 @@ public class Disciplina {
 
 	}
 
-	// Nota do aluno
+	// #### METODO ULTILIZADO PARA EXIBIR A NOTA DO ALUNO ###
+	// #### RECEBE COMO PARAMENTRO A NOTA DO ALUNO ####
 	public void getNotaAluno(int posAluno) {
 		for (int i = 0; i < alunos.size(); i++) {
 			if (posAluno == i) {
@@ -320,7 +327,7 @@ public class Disciplina {
 		}
 	}
 
-	// Exibir Alunos Acima da media
+	// ### METODO ULTILIZADO PARA EXIBIR ALUNOS ACIMA DA MEDIA ###
 	public void exibirAlunosAcimaMedia() {
 		double mediatotal = calcularMedia();
 		int totalalunos = getNumerosAlunos();
@@ -336,7 +343,7 @@ public class Disciplina {
 		}
 	}
 
-	// Exibir Alunos a Baixo da Media
+	// ### METODO ULTILIZADO PARA EXIBIR ALUNOS ABAIXO DA MEDIA ###
 	public void exibirAlunosAbaixoMedia() {
 		double mediatotal = calcularMedia();
 		int totalalunos = getNumerosAlunos();
@@ -352,7 +359,7 @@ public class Disciplina {
 		}
 	}
 
-	// Exibir Aproveitamento
+	// ### METODO ULTILIZADO PARA EXIBIR APROVEITAMENTO DOS ALUNOS ###
 	public void exibirAlunoNotaAproveitamento() {
 		int totalalunos = getNumerosAlunos();
 		if (totalalunos > 0) {
@@ -370,20 +377,23 @@ public class Disciplina {
 
 	}
 
-	// Metodo para Desmatricular todos Alunos
+	// ### METODO USADO PARA DESMATRICULAR TODOS OS ALUNOS ###
+	// ### CHAMA OUTRO METODO COMO PADRAO ONDE PASSA O I COMO PARAMENTRO ###
 	public void desmatricularAlunos() {
 		for (int i = 0; i < alunos.size(); i++) {
 			desmatriculaAluno(i);
 
 		}
 	}
-	//Exibir ordem por Notas 
+	// ### METODO ULTILIZADO PARA EXIBIR AS NOTAS ###
+	// ### EXIBIR NOTAS POR ORDEM ####
 	public void exibirOrdenadosPorNotas(){
 	 Collections.sort(notas);	
 	 System.out.println("Ordem: " + notas);
 	 
 	}
 	
+	// ### METODO ULTILIZADO PARA EXIBIR DADOS DAS DISCIPLICAS ###
 	public void exibirDisciplina() {
 		
 		

@@ -11,7 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		// Ultilizando o primerio construtor llll
+		// Ultilizando o primerio construtor 
 		Disciplina materia1 = new Disciplina("Matematica", 1, 5, 4);
 
 		// Criando Objeto Aluno

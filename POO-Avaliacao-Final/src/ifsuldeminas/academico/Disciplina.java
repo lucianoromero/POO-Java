@@ -173,4 +173,63 @@ public class Disciplina {
 		return total;
 	}
 
+	// ###########################
+	// ### EXIBIR A MAIOR NOTA ###
+	public void exibirMaiorNota() {
+		Double maior = (double) 0;
+		int possicao = 0;
+		for (int i = 0; i < alunos.size(); i++) {
+			if (notas.get(i) > maior) {
+				maior = notas.get(i);
+				possicao = i;
+			}
+		}
+		System.out
+				.println("Aluno com a maior nota: " + alunos.get(possicao).getNome() + " Nota: " + notas.get(possicao));
+
+	}
+
+	// ##########################
+	// ### EXIBIR MENOR NOTA ###
+	public void exibirMenorNota() {
+		Double menor = (double) 15;
+		int possicao = 0;
+		for (int i = 0; i < alunos.size(); i++) {
+			if (notas.get(i) < menor) {
+				menor = notas.get(i);
+				possicao = i;
+			}
+		}
+		System.out
+				.println("Aluno com a menor nota: " + alunos.get(possicao).getNome() + " Nota: " + notas.get(possicao));
+
+	}
+
+	// #####################################
+	// ### RETORNA O TOTAL DE REPROVADOS ###
+	public int getQuantidadeReprovados() {
+		int retorno = 0;
+		for (int i = 0; i < alunos.size(); i++) {
+			if (estaAprovado(i) == false) {
+				retorno = retorno + 1;
+
+			}
+
+		}
+		return retorno;
+	}
+	// ####################################
+	// ### RETORNA O TOTAL DE APROVADOS ###
+	public int getQuantidadeAprovados() {
+		int retorno = 0;
+		for (int i = 0; i < alunos.size(); i++) {
+			if (estaAprovado(i) == true) {
+				retorno = retorno + 1;
+
+			}
+
+		}
+		return retorno;
+	}
+
 }// FIM DA CLASSE

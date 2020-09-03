@@ -56,14 +56,13 @@ public class Disciplina {
 	// ### METODO ULTILIZADO PARA DESMATRICULAR ALUNO ###
 	// ### DESMATRICULA CONFORME POSSICAO INFORMADA ###
 	public boolean desmatricularAluno(int posAluno) {
-		for (int i = 0; i < alunos.size(); i++) {
-			if (alunos.get(i) != null) {
-				alunos.remove(posAluno);
-				notas.remove(posAluno);
-				frequencias.remove(posAluno);
-				return true;
-			}
+		if (alunos.get(posAluno) != null) {
+			alunos.remove(posAluno);
+			notas.remove(posAluno);
+			frequencias.remove(posAluno);
+			return true;
 		}
+
 		return false;
 	}
 
@@ -300,8 +299,21 @@ public class Disciplina {
 	// #########################################
 	// ### EXIBIR NOME NOTA E APROVEITAMENTO ###
 	public void exibirAlunoNotasAproveitamento() {
-		
+		for (int i = 0; i < alunos.size(); i++) {
+			System.out.println("Nome: " + alunos.get(i).getNome());
+			System.out.println("Nota: " + notas.get(i));
+			System.out.println("Aproveitamento: " + getAproveitamentoAluno(i));
+			System.out.println("===================");
+		}
 
 	}
-
+	// ##############################################
+	// ### METODO PARA DESMATRICULAR TODOS ALUNOS ###
+    public void desmatricularAlunos() {
+    	for (int i = 0; i < alunos.size(); i++) {
+    		desmatricularAluno(i);
+    	}
+    }
+	
+	
 }// FIM DA CLASSE

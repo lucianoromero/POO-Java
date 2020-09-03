@@ -66,7 +66,7 @@ public class Main {
 		materia1.setProfessor(professor1);
 
 		// ### testes ###
-       materia1.exibirAlunosAbaixoMedia();
+       materia1.exibirAlunoNotasAproveitamento();
        
 		// ### Menu ###
         /*

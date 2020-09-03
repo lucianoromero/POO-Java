@@ -66,9 +66,9 @@ public class Main {
 		materia1.setProfessor(professor1);
 
 		// ### testes ###
-
+        materia1.teste();
 		// ### Menu ###
-
+        /*
 		int opcao;
 		// Estrutura de Repeticao
 		do {
@@ -120,6 +120,7 @@ public class Main {
 				System.out.println("#################");
 				break;
 			case 7:
+				materia1.
 				System.out.println("#################");
 				break;
 			case 8:
@@ -139,7 +140,8 @@ public class Main {
 
 		} while (opcao != 0);
 
-		sc.close();
+		sc.close(); 
+		*/
 	}
 
 }

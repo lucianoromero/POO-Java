@@ -39,7 +39,7 @@ public class Main {
 		materia1.matricularAluno(aluno10);
 
 		// Configurando as notas dos Alunos
-		materia1.addNota(0, 0.2);
+		materia1.addNota(0, 6);
 		materia1.addNota(1, 4);
 		materia1.addNota(2, 2);
 		materia1.addNota(3, 1);
@@ -48,25 +48,25 @@ public class Main {
 		materia1.addNota(6, 7);
 		materia1.addNota(7, 8);
 		materia1.addNota(8, 9);
-		materia1.addNota(9, 1.5);
+		materia1.addNota(9, 9);
 		// Configurando Frequencia
-		materia1.addFrequencia(0, 5);
-		materia1.addFrequencia(1, 4);
-		materia1.addFrequencia(2, 2);
-		materia1.addFrequencia(3, 1);
-		materia1.addFrequencia(4, 5);
-		materia1.addFrequencia(5, 6);
-		materia1.addFrequencia(6, 7);
-		materia1.addFrequencia(7, 8);
-		materia1.addFrequencia(8, 9);
-		materia1.addFrequencia(9, 7);
+		materia1.addFrequencia(0, 50);
+		materia1.addFrequencia(1, 40);
+		materia1.addFrequencia(2, 20);
+		materia1.addFrequencia(3, 10);
+		materia1.addFrequencia(4, 50);
+		materia1.addFrequencia(5, 60);
+		materia1.addFrequencia(6, 75);
+		materia1.addFrequencia(7, 81);
+		materia1.addFrequencia(8, 90);
+		materia1.addFrequencia(9, 100);
 		// Criando um Ojeto provessor
 		Professor professor1 = new Professor("Fernando", 777);
 		// Colocando o Professor na Materia
 		materia1.setProfessor(professor1);
 
 		// ### testes ###
-        materia1.teste();
+        materia1.exibirfrequencia();
 		// ### Menu ###
         /*
 		int opcao;

@@ -3,7 +3,6 @@ package ifsuldeminas.academico;
 import ifsuldeminas.funcionarios.Professor;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 import ifsuldeminas.alunos.Aluno;
 
@@ -307,13 +306,43 @@ public class Disciplina {
 		}
 
 	}
+
 	// ##############################################
 	// ### METODO PARA DESMATRICULAR TODOS ALUNOS ###
-    public void desmatricularAlunos() {
-    	for (int i = 0; i < alunos.size(); i++) {
-    		desmatricularAluno(i);
-    	}
-    }
-	
-	
+	public void desmatricularAlunos() {
+		for (int i = 0; i < alunos.size(); i++) {
+			desmatricularAluno(i);
+		}
+	}
+
+	// #################################
+	// ### EXIBIR POR ORDEM AS NOTAS ###
+	public void exibirOrnadosPorNotas() {
+
+	}
+
+	/// #############################################
+	/// ### EXIBIR IMFORMAÇOES DA DISCIPLIA TODAS ###
+	public void exibirDisciplina() {
+		if (getNumerosAlunos() == 0) {
+			System.out.println("Disciplina nao possui alunos matriculados");
+		} else {
+		exibirProfessor();
+		System.out.println("===================");
+		System.out.println("======Alunos=======");
+		exibirAlunoNotasAproveitamento();
+		System.out.println("======Media Total=======");
+		System.out.println(calcularMedia());
+		System.out.println("======Quantidade de Alunos=======");
+		System.out.println(getNumerosAlunos());
+		System.out.println("======Reprovados=======");
+		System.out.println(getQuantidadeReprovados());
+		System.out.println("======Aprovados=======");
+		System.out.println(getQuantidadeAprovados());
+		}
+		
+		
+
+	}
+
 }// FIM DA CLASSE

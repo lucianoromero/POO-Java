@@ -51,14 +51,14 @@ public class Main {
 		materia1.addNota(9, 9);
 		// Configurando Frequencia
 		materia1.addFrequencia(0, 50);
-		materia1.addFrequencia(1, 40);
-		materia1.addFrequencia(2, 20);
-		materia1.addFrequencia(3, 10);
-		materia1.addFrequencia(4, 50);
-		materia1.addFrequencia(5, 60);
-		materia1.addFrequencia(6, 75);
-		materia1.addFrequencia(7, 81);
-		materia1.addFrequencia(8, 90);
+		materia1.addFrequencia(1, 50);
+		materia1.addFrequencia(2, 100);
+		materia1.addFrequencia(3, 50);
+		materia1.addFrequencia(4, 100);
+		materia1.addFrequencia(5, 50);
+		materia1.addFrequencia(6, 100);
+		materia1.addFrequencia(7, 50);
+		materia1.addFrequencia(8, 50);
 		materia1.addFrequencia(9, 100);
 		// Criando um Ojeto provessor
 		Professor professor1 = new Professor("Fernando", 777);
@@ -66,8 +66,8 @@ public class Main {
 		materia1.setProfessor(professor1);
 
 		// ### testes ###
-       materia1.getQuantidadeReprovados();
-       materia1.exibirReprovados();
+       materia1.exibirAlunosAbaixoMedia();
+       
 		// ### Menu ###
         /*
 		int opcao;

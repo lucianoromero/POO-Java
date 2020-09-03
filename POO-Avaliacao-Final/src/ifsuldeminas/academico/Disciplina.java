@@ -218,6 +218,7 @@ public class Disciplina {
 		}
 		return retorno;
 	}
+
 	// ####################################
 	// ### RETORNA O TOTAL DE APROVADOS ###
 	public int getQuantidadeAprovados() {
@@ -230,6 +231,77 @@ public class Disciplina {
 
 		}
 		return retorno;
+	}
+
+	// ######################################
+	// ## MOSTRAR INFORMACAO DO PROFESSOR ##
+	public void exibirProfessor() {
+		if (this.professor == null) {
+			System.out.println("Disciplina nao possui professor");
+		} else {
+			System.out.println("Nome: " + professor.getNome() + " Suap: " + professor.getSuap());
+		}
+	}
+
+	// #########################################
+	// ### RETORNA O APROVEITAMENTO DO ALUNO ###
+	public double getAproveitamentoAluno(int posAluno) {
+		double retorno = 0;
+
+		if (frequencias.get(posAluno) == 100) {
+			retorno = 100;
+		}
+		if (frequencias.get(posAluno) <= 50) {
+			retorno = 50;
+		}
+
+		return retorno;
+	}
+
+	// ###################################
+	// ### RETORNA A NOTA DE UM ALUNO ####
+	public double getNotaAluno(int posAluno) {
+		double retorno = 0;
+		retorno = notas.get(posAluno);
+		return retorno;
+	}
+
+	// ##################################################
+	// ### METODO QUE EXIBE OS ALUNOS ASSIMA DA MEDIA ###
+	public void exibirAlunosAcimasMedia() {
+		if (getNumerosAlunos() == 0) {
+			System.out.println("Disciplina nao possui alunos matriculados");
+		} else {
+			for (int i = 0; i < alunos.size(); i++) {
+				if (notas.get(i) >= calcularMedia()) {
+					System.out.println("Alunos Acima da media: " + alunos.get(i).getNome() + " Notas: " + notas.get(i));
+				}
+			}
+
+		}
+	}
+
+	// ###################################################
+	// ### METODO QUE EXIBE OS ALUNOS A BAIXO DA MEDIA ###
+	public void exibirAlunosAbaixoMedia() {
+		if (getNumerosAlunos() == 0) {
+			System.out.println("Disciplina nao possui alunos matriculados");
+		} else {
+			for (int i = 0; i < alunos.size(); i++) {
+				if (notas.get(i) < calcularMedia()) {
+					System.out
+							.println("Alunos Abaixo da media: " + alunos.get(i).getNome() + " Notas: " + notas.get(i));
+				}
+			}
+
+		}
+	}
+
+	// #########################################
+	// ### EXIBIR NOME NOTA E APROVEITAMENTO ###
+	public void exibirAlunoNotasAproveitamento() {
+		
+
 	}
 
 }// FIM DA CLASSE

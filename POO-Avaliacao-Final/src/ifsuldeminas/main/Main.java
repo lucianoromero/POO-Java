@@ -120,7 +120,6 @@ public class Main {
 				System.out.println("#################");
 				break;
 			case 7:
-				materia1.
 				System.out.println("#################");
 				break;
 			case 8:

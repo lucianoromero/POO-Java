@@ -81,14 +81,14 @@ public class Disciplina {
 
 	// ##########################################################
 	// ### METODO QUE RETORNA O NUMERO DE ALUNOS MATRICULADOS ###
-	public void getNumerosAlunos() {
+	public int getNumerosAlunos() {
 		int quantidade = 0;
 		for (int i = 0; i < alunos.size(); i++) {
 			if (alunos.get(i) != null) {
 				quantidade = quantidade + 1;
 			}
 		}
-		System.out.println("Quantidade de Alunos Matriculados: " + quantidade);
+		return quantidade;
 	}
 
 	// ##############################################
@@ -114,21 +114,30 @@ public class Disciplina {
 					return true;
 				}
 			}
-		}return false;
+		}
+		return false;
 	}
-	
-	//#######################################
-	//### METODO PARA EXIBIR REPROVADOS #####
-    public void exibirReprovados() {
-    	boolean retorno;
-    	for (int i = 0; i < alunos.size(); i++) {
-    		 retorno = estaAprovado(i);
-    		if(retorno == false) {
-             System.out.println("Alunos Reprovados: " +alunos.get(i).getNome() + " Notas: " + notas.get(i) + " Frequencia: " + frequencias.get(i));     					
-    		}
-    	}
-    	
-    }
 
+	// #######################################
+	// ### METODO PARA EXIBIR REPROVADOS #####
+	public void exibirReprovados() {
+		boolean retorno;
+		int total = 0;
+		if (getNumerosAlunos() == 0) {
+			System.out.println("Disciplina nao possui alunos matriculados");
+		} else {
+			for (int i = 0; i < alunos.size(); i++) {
+				retorno = estaAprovado(i);
+				if (retorno == false) {
+					System.out.println("Alunos Reprovados: " + alunos.get(i).getNome() + " Notas: " + notas.get(i)
+							+ " Frequencia: " + frequencias.get(i));
+					total = total + 1;
+				}
+			}
+			if (total == 0) {
+				System.out.println("Não ha alunos reprovados");
+			}
+		}
+	}
 
 }// FIM DA CLASSE

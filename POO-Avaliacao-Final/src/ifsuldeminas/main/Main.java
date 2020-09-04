@@ -143,6 +143,27 @@ public class Main {
 				System.out.println("#################");
 				break;
 			case 11:
+				System.out.println("Bem vindo ao Sistem de Matricula");
+				System.out.println("Digite o nome: ");
+				String nome = sc.nextLine();
+				System.out.println("registro acadêmico deve estar\r\n" + 
+						"no intervalo [1000 até 9999]");
+				System.out.println("Digite o Numero do RA: ");
+				int ra = sc.nextInt();
+				System.out.println("Digite o Curso: ");
+				String curso = sc.nextLine();
+				Aluno aluno11 = new Aluno(nome, ra, curso);
+				materia1.matricularAluno(aluno11);
+				System.out.println("A nota deve estar no intervalo [0,10]");
+				System.out.println("Digite a Nota do Aluno: ");
+				int nota = sc.nextInt();
+				materia1.addNota(10, nota);
+				System.out.println("Frequencia total não\r\n" + 
+						"pode ser maior que o número total de aulas da disciplina. ");
+				System.out.println("Digite a Frequencia do Aluno: ");
+				int frequencia = sc.nextInt();
+				materia1.addFrequencia(10, frequencia);
+				
 				System.out.println("#################");
 				break;
 

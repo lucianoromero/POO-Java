@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import ifsuldeminas.alunos.Aluno;
 
 public class Disciplina {
+	/**
+	 * @author Luciano Luiz Romero
+	 * @version 1.0
+	 */
 	private String nome;
 	private int periodo;
 	private int numAulasSemana;
@@ -80,13 +84,7 @@ public class Disciplina {
 	// ##########################################################
 	// ### METODO QUE RETORNA O NUMERO DE ALUNOS MATRICULADOS ###
 	public int getNumerosAlunos() {
-		int quantidade = 0;
-		for (int i = 0; i < alunos.size(); i++) {
-			if (alunos.get(i) != null) {
-				quantidade = quantidade + 1;
-			}
-		}
-		return quantidade;
+		return alunos.size();
 	}
 
 	// ##############################################
@@ -106,27 +104,22 @@ public class Disciplina {
 	// ##############################################################
 	// ### METODO PARA VERIFICAR SE O ALUNO ESTRA APROVADO OU NAO ###
 	public boolean estaAprovado(int posAluno) {
-		for (int i = 0; i < alunos.size(); i++) {
-			if (i == posAluno) {
-				if ((notas.get(i) >= 6) || (frequencias.get(i) >= 75)) {
-					return true;
-				}
-			}
+		if ((notas.get(posAluno) >= 6) || (frequencias.get(posAluno) >= 75)) {
+			return true;
+		} else {
+			return false;
 		}
-		return false;
 	}
 
 	// #######################################
 	// ### METODO PARA EXIBIR REPROVADOS #####
 	public void exibirReprovados() {
-		boolean retorno;
 		int total = 0;
 		if (getNumerosAlunos() == 0) {
 			System.out.println("Disciplina nao possui alunos matriculados");
 		} else {
 			for (int i = 0; i < alunos.size(); i++) {
-				retorno = estaAprovado(i);
-				if (retorno == false) {
+				if (estaAprovado(i) == false) {
 					System.out.println("Alunos Reprovados: " + alunos.get(i).getNome() + " Notas: " + notas.get(i)
 							+ " Frequencia: " + frequencias.get(i));
 					total = total + 1;
@@ -141,14 +134,12 @@ public class Disciplina {
 	// #####################################
 	// ### METODO PARA EXIBIR APROVADOS ###
 	public void exibirAprovados() {
-		boolean retorno;
 		int total = 0;
 		if (getNumerosAlunos() == 0) {
 			System.out.println("Disciplina nao possui alunos matriculados");
 		} else {
 			for (int i = 0; i < alunos.size(); i++) {
-				retorno = estaAprovado(i);
-				if (retorno == true) {
+				if (estaAprovado(i) == true) {
 					System.out.println("Alunos Aprovados: " + alunos.get(i).getNome() + " Notas: " + notas.get(i)
 							+ " Frequencia: " + frequencias.get(i));
 					total = total + 1;
@@ -327,21 +318,19 @@ public class Disciplina {
 		if (getNumerosAlunos() == 0) {
 			System.out.println("Disciplina nao possui alunos matriculados");
 		} else {
-		exibirProfessor();
-		System.out.println("===================");
-		System.out.println("======Alunos=======");
-		exibirAlunoNotasAproveitamento();
-		System.out.println("======Media Total=======");
-		System.out.println(calcularMedia());
-		System.out.println("======Quantidade de Alunos=======");
-		System.out.println(getNumerosAlunos());
-		System.out.println("======Reprovados=======");
-		System.out.println(getQuantidadeReprovados());
-		System.out.println("======Aprovados=======");
-		System.out.println(getQuantidadeAprovados());
+			exibirProfessor();
+			System.out.println("===================");
+			System.out.println("======Alunos=======");
+			exibirAlunoNotasAproveitamento();
+			System.out.println("======Media Total=======");
+			System.out.println(calcularMedia());
+			System.out.println("======Quantidade de Alunos=======");
+			System.out.println(getNumerosAlunos());
+			System.out.println("======Reprovados=======");
+			System.out.println(getQuantidadeReprovados());
+			System.out.println("======Aprovados=======");
+			System.out.println(getQuantidadeAprovados());
 		}
-		
-		
 
 	}
 

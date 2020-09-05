@@ -10,6 +10,10 @@ import ifsuldeminas.academico.Disciplina;
 public class Main {
 
 	public static void main(String[] args) {
+		/**
+		 * @author Luciano Luiz Romero
+		 * @version 1.0
+		 */
 		Scanner sc = new Scanner(System.in);
 		// Ultilizando o primerio construtor
 		Disciplina materia1 = new Disciplina("Matematica", 1, 5, 4);
@@ -64,10 +68,6 @@ public class Main {
 		Professor professor1 = new Professor("Fernando", 777);
 		// Colocando o Professor na Materia
 		materia1.setProfessor(professor1);
-
-		// ### testes APAGAR DEPOIS ###
-		/// materia1.exibirOrnadosPorNotas();
-
 		// ### Menu ###
 
 		int opcao;
@@ -145,25 +145,24 @@ public class Main {
 			case 11:
 				System.out.println("Bem vindo ao Sistem de Matricula");
 				System.out.println("Digite o nome: ");
-				String nome = sc.nextLine();
-				System.out.println("registro acadêmico deve estar\r\n" + 
-						"no intervalo [1000 até 9999]");
+				String nome = sc.next();
+				System.out.println("registro acadêmico deve estar\r\n" + "no intervalo [1000 até 9999]");
 				System.out.println("Digite o Numero do RA: ");
 				int ra = sc.nextInt();
 				System.out.println("Digite o Curso: ");
-				String curso = sc.nextLine();
+				String curso = sc.next();
 				Aluno aluno11 = new Aluno(nome, ra, curso);
 				materia1.matricularAluno(aluno11);
 				System.out.println("A nota deve estar no intervalo [0,10]");
 				System.out.println("Digite a Nota do Aluno: ");
 				int nota = sc.nextInt();
 				materia1.addNota(10, nota);
-				System.out.println("Frequencia total não\r\n" + 
-						"pode ser maior que o número total de aulas da disciplina. ");
+				System.out.println(
+						"Frequencia total não\r\n" + "pode ser maior que o número total de aulas da disciplina. ");
 				System.out.println("Digite a Frequencia do Aluno: ");
 				int frequencia = sc.nextInt();
 				materia1.addFrequencia(10, frequencia);
-				
+
 				System.out.println("#################");
 				break;
 

@@ -306,12 +306,6 @@ public class Disciplina {
 		}
 	}
 
-	// #################################
-	// ### EXIBIR POR ORDEM AS NOTAS ###
-	public void exibirOrnadosPorNotas() {
-
-	}
-
 	/// #############################################
 	/// ### EXIBIR IMFORMAÇOES DA DISCIPLIA TODAS ###
 	public void exibirDisciplina() {

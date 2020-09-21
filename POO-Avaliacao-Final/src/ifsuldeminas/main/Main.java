@@ -85,8 +85,7 @@ public class Main {
 			System.out.println("Opcao:7 - Imprimir media total da turma e listar todos os alunos acima da media");
 			System.out.println("Opcao:8 - Imprimir media total da turma e listar todos os alunos a baixo da media");
 			System.out.println("Opcao:9 - Imprimir nome dos alunos e suas respecitivas notas e aproveitamento");
-			System.out.println("Opcao:10 -Imprimir alunos ordenados por notas");
-			System.out.println("Opcao:11 - Matricular Aluno");
+			System.out.println("Opcao:10 - Matricular Aluno");
 			opcao = sc.nextInt();
 
 			switch (opcao) {
@@ -139,10 +138,6 @@ public class Main {
 				System.out.println("#################");
 				break;
 			case 10:
-				materia1.exibirOrnadosPorNotas();
-				System.out.println("#################");
-				break;
-			case 11:
 				System.out.println("Bem vindo ao Sistem de Matricula");
 				System.out.println("Digite o nome: ");
 				String nome = sc.next();
